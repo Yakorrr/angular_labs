@@ -22,4 +22,8 @@ export class AppComponent {
     posts: Post[] = [{title: 'Learning components', text: 'Creating project "Blog"...', id: 1},
         {title: 'Learning directives', text: 'Still creating project "Blog"...', id: 2}]
 
+    updatePosts(post: Post) {
+        this.posts.unshift(post);
+    }
+
 }
