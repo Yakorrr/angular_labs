@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector: 'my-app',
+    selector: 'app-root',
     template: `
         <div>Without formatting: {{myDate}}</div>
         <div>With formatting: {{myDate | date}}</div>
@@ -19,12 +19,21 @@ import {Component} from '@angular/core';
         <div>{{money | currency:'UAH':'symbol-narrow':'1.1-1'}}</div>
         <div>{{money | currency:'UAH':'Only today for '}}</div>
         <div>{{message | slice:6:11 | uppercase}}</div>
-        <div>Число до форматування: {{x}}<br>Число після форматування: {{x |
-            format}}</div>
+        <div>
+            Number before formatting: {{x}}
+            <br>
+            Number after formatting: {{x | format}}
+        </div>
         <hr/>
+
         <div>{{users | join}}</div>
         <div>{{users | join:1}}</div>
-        <div>{{users | join:1:3}}</div>`
+        <div>{{users | join:1:3}}</div>
+        <hr>
+
+        <div>Basic number: {{numberBasic}}</div>
+        <div>Square root of number: {{numberBasic | squareRoot | number:'1.0-7'}}</div>
+    `
 })
 export class AppComponent {
     myDate = new Date(1961, 3, 12);
@@ -35,4 +44,5 @@ export class AppComponent {
     message = "Hello World!";
     x: number = 15.45;
     users = ["Tom", "Alice", "Sam", "Kate", "Bob"];
+    numberBasic: number = 49;
 }
