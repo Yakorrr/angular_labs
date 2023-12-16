@@ -50,6 +50,7 @@ import {Component} from '@angular/core';
         <div>Square root of number: {{numberBasic | squareRoot | number:'1.0-7'}}</div>
     `
 })
+
 export class AppComponent {
     myDate = new Date(1961, 3, 12);
     welcome: string = "Hello World!";

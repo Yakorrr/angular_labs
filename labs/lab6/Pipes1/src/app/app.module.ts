@@ -10,5 +10,6 @@ import {JoinPipe} from './join.pipe';
     declarations: [AppComponent, FormatPipe, JoinPipe, SquareRootPipe],
     bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }
