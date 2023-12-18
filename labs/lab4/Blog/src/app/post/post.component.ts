@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, Output, EventEmitter } from '@angular/core';
-import { Post } from '../app.component';
+import {Component, Input, OnDestroy, Output, EventEmitter} from '@angular/core';
+import {Post} from '../app.component';
 
 @Component({
     selector: 'app-post',

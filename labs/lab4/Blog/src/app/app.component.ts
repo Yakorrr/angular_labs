@@ -4,6 +4,7 @@ export interface Post {
     title: string;
     text: string;
     id?: number;
+    date?: Date;
 }
 
 @Component({
@@ -11,12 +12,15 @@ export interface Post {
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
     title = 'Blog';
     posts: Post[] = [
-        {title: 'Learning components', text: 'Creating project "Blog"...', id: 1},
-        {title: 'Learning directives', text: 'Still creating project "Blog"...', id: 2},
+        {title: 'Learning components', text: 'Creating project "Blog"...', id: 1, date: new Date},
+        {title: 'Learning directives', text: 'Still creating project "Blog"...', id: 2, date: new Date},
     ];
+
+    search: string = '';
 
     updatePosts(post: Post) {
         console.log('Post', post);
